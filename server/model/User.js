@@ -15,7 +15,8 @@ const options = {
     type: String
   },
   description: {
-    type: String
+    type: String,
+    default: 'No description'
   },
   images: {
     type: Array,
@@ -24,6 +25,10 @@ const options = {
   comms: {
     type: Array,
     default: []
+  },
+  dateAdded: {
+    type: Date,
+    default: new Date()
   }
 }
 
