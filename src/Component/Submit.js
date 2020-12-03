@@ -1,8 +1,7 @@
-import React from 'react';
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import { green, purple } from '@material-ui/core/colors';
-
+import React from 'react'
+import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
+import { green, purple } from '@material-ui/core/colors'
 
 
 const ColorButton = withStyles((theme) => ({
@@ -13,7 +12,7 @@ const ColorButton = withStyles((theme) => ({
       backgroundColor: purple[700],
     },
   },
-}))(Button);
+}))(Button)
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -21,18 +20,17 @@ const useStyles = makeStyles((theme) => ({
     
   },
   
-}));
+}))
 
 const theme = createMuiTheme({
   palette: {
     primary: green,
   },
-});
-
+})
 
 
 export default function CustomizedButtons() {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div>
@@ -44,5 +42,5 @@ export default function CustomizedButtons() {
       </ThemeProvider>
       
     </div>
-  );
+  )
 }

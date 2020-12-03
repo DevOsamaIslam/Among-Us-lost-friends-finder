@@ -3,19 +3,32 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: 'eslint:recommended',
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended'
+  ],
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   rules: {
     quotes: [
-      'error',
+      'warn',
       'single'
     ],
-    'prefer-arrow-callback': 'error',
-    'no-multiple-empty-lines': 'error',
-    indent: ['error', 2],
-    semi: ['error', 'never']
+    'prefer-arrow-callback': 'warn',
+    'no-multiple-empty-lines': 'warn',
+    indent: ['warn', 2],
+    semi: ['warn', 'never'],
+    'react/react-in-jsx-scope': 'off',
+    'no-unused-vars': 'warn'
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 }
