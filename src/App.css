@@ -37,3 +37,19 @@
   }
 }
 
+.MuiAccordion-rounded:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #37474f;
+}
+
+
+.MuiAppBar-colorPrimary {
+  background-color: #102027 !important;
+}
+
+/* .MuiPaper-elevation2 {
+  background-color: #62727b !important;
+} */
+
+

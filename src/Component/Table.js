@@ -10,6 +10,7 @@ const placeholder = {
 }
 
 
+
 export const Table = () => {
   const data = []
   let {
@@ -28,6 +29,7 @@ export const Table = () => {
     })
         
   }
+  
   const columns = [
     {
       title: 'Tag Name',
@@ -62,6 +64,7 @@ export const Table = () => {
       field: 'screenshot/video'
     },
   ]
+
   return ( < div >
     <
       MaterialTable title = "Players List"
@@ -108,8 +111,7 @@ export const Table = () => {
             }),
         }
       }
-    /> < /
-    div > )
+    /> </div> )
 }
 
 
