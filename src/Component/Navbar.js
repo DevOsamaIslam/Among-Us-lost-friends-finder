@@ -8,6 +8,8 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 
 
+
+
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({ target: window ? window() : undefined  });
@@ -32,7 +34,7 @@ export default function HideAppBar(props) {
       <HideOnScroll {...props}>
         <AppBar>
           <Toolbar>
-            <Typography variant="h6">Among Us lost friends finder</Typography>
+            {<Typography variant="h6">Among Us lost friends finder</Typography>}
           </Toolbar>
         </AppBar>
       </HideOnScroll>

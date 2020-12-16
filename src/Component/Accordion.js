@@ -10,6 +10,7 @@ import DateTime from '../Component/DateTime';
 import SharingInfo from '../Component/SharingInfo';
 import UploadPhoto from '../Component/UploadPhoto';
 import Submit from '../Component/Submit';
+import logo from '../assets/images/NavPic.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,7 +32,8 @@ export default function SimpleAccordion() {
 
   return (
     <div className={classes.root}>
-      <Accordion>
+      <Accordion className={classes.logo}>
+       
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"

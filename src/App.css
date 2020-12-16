@@ -45,11 +45,25 @@
 
 
 .MuiAppBar-colorPrimary {
-  background-color: #102027 !important;
+  background-color: #102027 !important; 
 }
 
-/* .MuiPaper-elevation2 {
-  background-color: #62727b !important;
-} */
+
+body {
+  background-image: url(assets/images/NavPic.jpg);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.MuiCollapse-entered {
+  height: auto;
+  overflow: visible;
+  background-image: url(assets/images/111.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 

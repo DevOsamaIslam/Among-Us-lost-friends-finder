@@ -7,7 +7,14 @@ import PhotoCamera from '@material-ui/icons/PhotoCamera'
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
-      margin: theme.spacing(1),
+    margin: theme.spacing(1),
+    background: 'black',
+    border: 0,
+    borderRadius: 1,
+    boxShadow: '1px 1px 5px 2px rgba(255, 255, 255)',
+    color: 'white',
+    height: 48,
+    padding: '8px 20px 10px 20px',
       
     },
   },
@@ -29,7 +36,7 @@ export default function UploadButtons() {
         type="file"
       />
       <label htmlFor="contained-button-file">
-        <Button variant="contained" color="primary" component="span">
+        <Button   component="span">
           Upload
         </Button>
       </label>

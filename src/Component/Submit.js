@@ -1,47 +1,29 @@
-import React from 'react'
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import { blueGrey, purple } from '@material-ui/core/colors'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
-
-const ColorButton = withStyles((theme) => ({
-  root: {
-    color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: purple[500],
-    
-    '&:hover': {
-      backgroundColor: purple[700],
-    },
-  },
-}))(Button)
 
 const useStyles = makeStyles((theme) => ({
-  margin: {
+  root: {
+    '& > *': {
     margin: theme.spacing(1),
-    
+    background: 'black',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '1px 1px 5px 2px rgba(255, 255, 255)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    },
   },
-  
-}))
+}));
 
-const theme = createMuiTheme({
-  palette: {
-    primary: blueGrey,
-  },
-})
-
-
-export default function CustomizedButtons() {
-  const classes = useStyles()
+export default function ContainedButtons() {
+  const classes = useStyles();
 
   return (
-    <div>
-      
-      <ThemeProvider theme={theme}>
-        <Button variant="contained" color="primary" className={classes.margin}>
-          SUBMIT
-        </Button>
-      </ThemeProvider>
-      
+    <div className={classes.root}>
+      <Button variant="contained">Submit</Button>
     </div>
-  )
+  );
 }
