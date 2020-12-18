@@ -7,6 +7,9 @@ import Box from '@material-ui/core/Box';
 import Copyright from './Component/Copyright';
 import { createMuiTheme } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
+import Avatar from './Component/Avatar';
+import Modal from './Component/Modal';
+
 
 function App() {
   const theme = createMuiTheme ({
@@ -20,12 +23,15 @@ function App() {
     <paper>
     <div>
       <Container maxWidth="fixed" fluid={true}>
-          <Navbar/>
+          {/* <Navbar/> */}
           <br></br>
-          <Accordion/>
+          <br></br>
+          {/* <Accordion/> */}
+          <Modal/>
           <br></br>
           <Table/>
           <Box mt={5}>
+          <Avatar/>
         <Copyright />
       </Box>
     </Container>

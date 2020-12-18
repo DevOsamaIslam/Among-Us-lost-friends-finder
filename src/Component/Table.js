@@ -1,5 +1,7 @@
 import React from 'react'
 import MaterialTable from 'material-table'
+// import Avatar from './Avatar'
+// <Avatar><avatar/>
 
 const placeholder = {
   tags: ['Osama', 'Alamo', 'Ahmed', 'Salim', 'Fattah', 'Malik', 'Noor'],
@@ -8,8 +10,6 @@ const placeholder = {
   maps: ['Skeld', 'Mira HQ', 'Polus'],
   dates: ['22/11/2020', '21/10/2020', '10/12/2019', '02/06/2020', '12/11/2020']
 }
-
-
 
 export const Table = () => {
   const data = []
@@ -30,6 +30,7 @@ export const Table = () => {
         
   }
   
+  
   const columns = [
     {
       title: 'Tag Name',
@@ -40,6 +41,7 @@ export const Table = () => {
       field: 'yourcolor'
     },
     {
+      
       title: 'Looking For',
       field: 'theirname'
     },
@@ -67,7 +69,7 @@ export const Table = () => {
 
   return ( < div >
     <
-      MaterialTable title = "Players List"
+      MaterialTable title = ""
       data = {
         data
       }
@@ -84,34 +86,8 @@ export const Table = () => {
           }
         }
       }
-
-      editable = {
-        {
-          isEditable: rowData => rowData.name === 'a',
-          isEditHidden: rowData => rowData.name === 'x',
-          isDeletable: rowData => rowData.name === 'b',
-          isDeleteHidden: rowData => rowData.name === 'y',
-          onBulkUpdate: changes =>
-            new Promise((resolve, reject) => {
-              setTimeout(() => {
-
-
-                resolve()
-              }, 1000)
-            }),
-          onRowAddCancelled: rowData => console.log('Row adding cancelled'),
-          onRowUpdateCancelled: rowData => console.log('Row editing cancelled'),
-          onRowAdd: newData =>
-            new Promise((resolve, reject) => {
-              setTimeout(() => {
-
-
-                resolve()
-              }, 1000)
-            }),
-        }
-      }
-    /> </div> )
+    />
+     </div> )
 }
 
 

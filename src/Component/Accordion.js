@@ -10,7 +10,6 @@ import DateTime from '../Component/DateTime';
 import SharingInfo from '../Component/SharingInfo';
 import UploadPhoto from '../Component/UploadPhoto';
 import Submit from '../Component/Submit';
-import logo from '../assets/images/NavPic.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
