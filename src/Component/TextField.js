@@ -2,6 +2,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
+import { Container } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -12,6 +13,14 @@ const useStyles = makeStyles((theme) => ({
       position : 'center',
     },
   },
+
+  text: {
+      color: '#9e9e9e',
+      fontFamily: 'Arial',
+      fontSize: 40 , 
+      fontWeight: 'bold',
+      // margin: 'auto',
+  },
 }))
 
 export default function BasicTextFields() {
@@ -19,15 +28,12 @@ export default function BasicTextFields() {
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <h1>Your Info</h1>
+      <p className={classes.text}>YOUR INFO</p>
       <TextField id="standard-basic" label="Name" />
       <TextField id="standard-basic" label="Colour" />
-      
-      <h1>Their Info</h1>
+      <p className={classes.text}>THEIR INFO</p>
       <TextField id="standard-basic" label="Name" />
       <TextField id="standard-basic" label="Colour" />
-      
-      
     </form>
   )
 }

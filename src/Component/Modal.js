@@ -6,6 +6,7 @@ import DateTime from '../Component/DateTime';
 import SharingInfo from '../Component/SharingInfo';
 import UploadPhoto from '../Component/UploadPhoto';
 import Submit from '../Component/Submit';
+
 function rand() {
   return Math.round(Math.random() * 20) - 10;
 }
@@ -23,27 +24,28 @@ function getModalStyle() {
 
 const useStyles = makeStyles((theme) => ({
   paper: {
+    // padding: theme.spacing(1, 4, 3),
     position: 'absolute',
+    left: 300,
+    top: 20,
     width: 800,
     height: 585,
     backgroundColor: "black",
     border: '2px solid #000',
     boxShadow: '1px 1px 5px 2px rgba(255, 255, 255)',
-    padding: theme.spacing(1, 4, 3),
-    // 243
+    
+    
   },
 
   register: {
-    position: 'relative',
-    margin: theme.spacing(1),
     background: 'black',
     border: 0,
     borderRadius: 3,
     boxShadow: '1px 1px 5px 2px rgba(255, 255, 255)',
     color: 'white',
     height: 48,
-    width: 1200,
-    padding: '0 30px',
+    width: 1300,
+    fontSize: 30,
   }
 }));
 
@@ -62,7 +64,7 @@ export default function SimpleModal() {
   };
 
   const body = (
-    <div style={modalStyle} className={classes.paper}>
+    <div className={classes.paper}>
         <TextField/>
         <SharingInfo/>
         <DateTime/>
@@ -72,9 +74,9 @@ export default function SimpleModal() {
   );
 
   return (
-    <div>
-      <button style={modalStyle} className={classes.register} type="button" onClick={handleOpen}>
-      Registration Here
+   <div>
+      <button  className={classes.register} type="button" onClick={handleOpen}>
+    Add a New Record
       </button>
       <Modal
         open={open}
@@ -83,7 +85,7 @@ export default function SimpleModal() {
         aria-describedby="simple-modal-description"
       >
         {body}
-      </Modal>
+      </Modal> 
     </div>
   );
 }

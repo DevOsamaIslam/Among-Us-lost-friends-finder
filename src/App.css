@@ -49,7 +49,7 @@
 }
 
 
-html {
+body {
   background-image: url(assets/images/NavPic.jpg);
   height: 100%; 
   background-position: center;
@@ -82,11 +82,21 @@ html {
 
 .MuiPaper-root {
   background-color: black !important;
+  font-weight: bold !important;
 }
 
 .MTableHeader-header-15 {
-  
   background-color: black !important;
+  font-weight: bold !important;
 }
 
+.MuiTableRow-root{
+  border: 2px solid white;
+    border-radius: 15px;
+    margin: 8px;  
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+  color: white;
+}
 

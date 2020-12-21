@@ -31,7 +31,7 @@ function App() {
           <br></br>
           <Table/>
           <Box mt={5}>
-          <Avatar/>
+          {/* <Avatar/> */}
         <Copyright />
       </Box>
     </Container>

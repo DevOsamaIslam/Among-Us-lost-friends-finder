@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     height: 48,
     padding: '0 30px',
+    width: 783,
+    "&:hover": {
+      background: "green"
+    },
     },
   },
 }));
