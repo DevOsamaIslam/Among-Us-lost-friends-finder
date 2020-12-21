@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+button {
+  background: black;
+  font-family: 'Amatic SC', cursive;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 2px white;
+  color: white;
+}
+
+button:hover {
+  border-color: lime;
+  color: lime;
+  border: 3px solid lime;
+  box-shadow: 1px 1px 5px 2px lime;
+}
+
 .App {
   text-align: center;
 }
@@ -49,7 +67,7 @@
 }
 
 
-body {
+html {
   background-image: url(assets/images/NavPic.jpg);
   height: 100%; 
   background-position: center;
